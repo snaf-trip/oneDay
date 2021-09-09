@@ -5,13 +5,16 @@ import TodoItem from "../TodoItem/TodoItem.jsx";
 
 function TodoList(props) {
   return (
-    <ul className='todo-list'>
-      {props.todos.map(todo => {
-        if (todo.completed === false) {
-          return <TodoItem className="done" todo={todo} key={todo.id} completedChange={props.onToggle} />
-        }
-      })}
-    </ul>
+    <div>
+      <h3>Todo</h3>
+      <ul className='todo-list'>
+        {props.todos.map(todo => {
+          if (todo.completed === false) {
+            return <TodoItem className="done" todo={todo} key={todo.id} completedChange={props.onToggle} />
+          }
+        })}
+      </ul>
+    </div>
   )
 }
 

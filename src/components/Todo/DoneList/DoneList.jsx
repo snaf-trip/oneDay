@@ -4,15 +4,18 @@ import TodoItem from "../TodoItem/TodoItem";
 
 function DoneList(props) {
   return (
-    <ul className='done-list'>
-      {props.todos.map(todo => {
+    <div>
+      <h3>Done</h3>
+      <ul className='done-list'>
+        {props.todos.map(todo => {
 
-        if (todo.completed === true) {
-          return <TodoItem todo={todo} key={todo.id} checked={'checked'} completedChange={props.onToggle} />
-        }
+          if (todo.completed === true) {
+            return <TodoItem todo={todo} key={todo.id} checked={'checked'} completedChange={props.onToggle} />
+          }
 
-      })}
-    </ul>
+        })}
+      </ul>
+    </div>
   )
 }
 
