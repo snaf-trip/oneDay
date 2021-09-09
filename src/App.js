@@ -21,14 +21,22 @@ function App() {
     }))
   }
 
-  console.log('pereresoval');
+  function deleteTask(id) {
+    let del = [];
+    for (let i = 0; i < todos.length; i++) {
+      if (todos[i].id !== id) {
+        del.push(todos[i]);
+      }
+    }
+    setTodos(del)
+  }
 
   return (
     <div className='container'>
       <h1 className='app-title'>OneDay</h1>
       <div className='lists'>
-        <TodoList todos={todos} onToggle={toggleTodo} />
-        <DoneList todos={todos} onToggle={toggleTodo} />
+        <TodoList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} />
+        <DoneList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} />
       </div>
     </div>
   );
