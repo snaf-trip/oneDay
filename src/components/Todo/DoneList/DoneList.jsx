@@ -8,7 +8,7 @@ function DoneList(props) {
       {props.todos.map(todo => {
 
         if (todo.completed === true) {
-          return <TodoItem className="done" todo={todo} key={todo.id} checked={'checked'} completedChange={props.onToggle} />
+          return <TodoItem todo={todo} key={todo.id} checked={'checked'} completedChange={props.onToggle} />
         }
 
       })}

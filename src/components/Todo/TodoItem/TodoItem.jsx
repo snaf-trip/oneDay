@@ -5,7 +5,7 @@ import './TodoItem.css';
 function TodoItem({ todo, completedChange, checked }) {
   console.log(todo);
   return (
-    <li {...todo.completed === true ? { className: 'done' } : console.log('ne true')}>
+    <li {...todo.completed === true ? { className: 'todo-item' + ' ' + 'done' } : { className: 'todo-item' }} >
       <input type="checkbox" onChange={() => completedChange(todo.id)} checked={checked} />
       {todo.title}
     </li >
