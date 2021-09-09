@@ -26,8 +26,10 @@ function App() {
   return (
     <div className='container'>
       <h1 className='app-title'>OneDay</h1>
-      <TodoList todos={todos} onToggle={toggleTodo} />
-      <DoneList todos={todos} onToggle={toggleTodo} />
+      <div className='lists'>
+        <TodoList todos={todos} onToggle={toggleTodo} />
+        <DoneList todos={todos} onToggle={toggleTodo} />
+      </div>
     </div>
   );
 }
