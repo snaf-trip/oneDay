@@ -11,7 +11,6 @@ function DoneList(props) {
           if (todo.completed === true) {
             return <TodoItem todo={todo} key={todo.id} checked={'checked'} completedChange={props.onToggle} deleteTask={props.deleteTask} />
           }
-
         })}
       </ul>
     </div>

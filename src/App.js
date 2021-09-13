@@ -17,12 +17,15 @@ function App() {
   }
 
   function toggleTodo(id) {
-    setTodos(todos.map(todo => {
+    let changeComplited = todos.map(todo => {
       if (todo.id === id) {
         todo.completed = !todo.completed;
       }
       return todo;
-    }))
+    })
+    localStorage.removeItem('todos');
+    localStorage.setItem('todos', JSON.stringify(changeComplited))
+    setTodos(changeComplited)
   }
 
   function deleteTask(id) {
