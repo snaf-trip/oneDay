@@ -1,12 +1,12 @@
 import React from "react";
 import './AddTask.css';
 
-function AddTask() {
+function AddTask({ setActive }) {
   return (
     <>
       <div className="modal-header">
         <h2 className="modal-title">Добавить задачу</h2>
-        <button className="modal-close-button">x</button>
+        <button className="modal-close-button" onClick={() => { setActive(false) }}>x</button>
       </div>
       <input type="text" className='modal-input-title' placeholder='Введите название задачи' />
       <textarea className='modal-input-description' placeholder='Введите описание задачи'></textarea>
@@ -15,7 +15,7 @@ function AddTask() {
       <input type="checkbox" name="important" id="important" />
       <label htmlFor="important">Важная задача</label>
       <button className='modal-create-button'>создать</button>
-      <button className='modal-cancel-button'>отмена</button>
+      <button className='modal-cancel-button' onClick={() => { setActive(false) }}>отмена</button>
     </>
   )
 }

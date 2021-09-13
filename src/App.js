@@ -52,7 +52,7 @@ function App() {
       </div>
       <ModalWindow active={modalActive} setActive={setModalActive} >
         {
-          modalContent === 'createTask' ? <AddTask /> : null
+          modalContent === 'createTask' ? <AddTask setActive={setModalActive} /> : null
         }
       </ModalWindow>
     </>
