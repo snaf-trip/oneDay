@@ -5,15 +5,9 @@ import ModalWindow from "./components/Modal/ModalWindow/ModalWindow.jsx";
 import AddTask from "./components/Modal/ModalContent/AddTask/AddTask.jsx";
 
 function App() {
-  const [modalActive, setModalActive] = useState(true);
+  const [modalActive, setModalActive] = useState(false);
   const [modalContent, setModalContent] = useState()
-  const [todos, setTodos] = React.useState([
-    { id: 1, completed: false, title: 'Task 1' },
-    { id: 2, completed: false, title: 'Task 2' },
-    { id: 3, completed: false, title: 'Task 3' },
-    { id: 4, completed: false, title: 'Task 4' },
-    { id: 5, completed: false, title: 'Task 5' }
-  ]);
+  const [todos, setTodos] = useState([]);
 
   function toggleTodo(id) {
     setTodos(todos.map(todo => {
@@ -52,7 +46,7 @@ function App() {
       </div>
       <ModalWindow active={modalActive} setActive={setModalActive} >
         {
-          modalContent === 'createTask' ? <AddTask setActive={setModalActive} /> : null
+          modalContent === 'createTask' ? <AddTask setActive={setModalActive} add={setTodos} todos={todos} /> : null
         }
       </ModalWindow>
     </>
