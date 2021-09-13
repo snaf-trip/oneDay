@@ -15,7 +15,7 @@ function createTask(todos, add) {
     important: taskImportant,
   }
   todos.push(task)
-  console.log(todos);
+  localStorage.setItem('todos', JSON.stringify(todos));
 
 
   taskId++;

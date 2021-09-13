@@ -6,8 +6,15 @@ import AddTask from "./components/Modal/ModalContent/AddTask/AddTask.jsx";
 
 function App() {
   const [modalActive, setModalActive] = useState(false);
-  const [modalContent, setModalContent] = useState()
+  const [modalContent, setModalContent] = useState();
   const [todos, setTodos] = useState([]);
+
+  let todosLS = localStorage.getItem('todos');
+  if (todosLS !== null) {
+    if (todosLS !== JSON.stringify(todos)) {
+      setTodos(JSON.parse(todosLS));
+    }
+  }
 
   function toggleTodo(id) {
     setTodos(todos.map(todo => {
@@ -25,6 +32,8 @@ function App() {
         del.push(todos[i]);
       }
     }
+    localStorage.removeItem('todos');
+    localStorage.setItem('todos', JSON.stringify(del))
     setTodos(del)
   }
 
