@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import TodoList from "./components/Todo/TodoList/TodoList.jsx";
 import DoneList from "./components/Todo/DoneList/DoneList.jsx";
+import ModalWindow from "./components/Modal/ModalWindow/ModalWindow.jsx";
 
 function App() {
+  const [modalActive, setModalActive] = useState(false)
   const [todos, setTodos] = React.useState([
     { id: 1, completed: false, title: 'Task 1' },
     { id: 2, completed: false, title: 'Task 2' },
@@ -10,7 +12,6 @@ function App() {
     { id: 4, completed: false, title: 'Task 4' },
     { id: 5, completed: false, title: 'Task 5' }
   ]);
-
 
   function toggleTodo(id) {
     setTodos(todos.map(todo => {
@@ -32,13 +33,17 @@ function App() {
   }
 
   return (
-    <div className='container'>
-      <h1 className='app-title'>OneDay</h1>
-      <div className='lists'>
-        <TodoList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} />
-        <DoneList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} />
+    <>
+      <div className='container'>
+        <h1 className='app-title'>OneDay</h1>
+        <button onClick={() => setModalActive(true)}>add task</button>
+        <div className='lists'>
+          <TodoList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} />
+          <DoneList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} />
+        </div>
       </div>
-    </div>
+      <ModalWindow active={modalActive} setActive={setModalActive} />
+    </>
   );
 }
 
