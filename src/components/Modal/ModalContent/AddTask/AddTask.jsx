@@ -1,6 +1,7 @@
 import React from "react";
 import './AddTask.css';
 import { createTask } from "../../../../utils/createTask";
+import { clearModal } from "../../../../utils/clearModal";
 
 function AddTask({ setActive, todos, add }) {
   return (
@@ -16,7 +17,7 @@ function AddTask({ setActive, todos, add }) {
       <input type="checkbox" name="important" id="important" />
       <label htmlFor="important">Важная задача</label>
       <button className='modal-create-button' onClick={() => createTask(todos, setActive)}>создать</button>
-      <button className='modal-cancel-button' onClick={() => { setActive(false) }}>отмена</button>
+      <button className='modal-cancel-button' onClick={() => { clearModal(setActive) }}>отмена</button>
     </>
   )
 }

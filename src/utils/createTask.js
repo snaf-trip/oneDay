@@ -22,8 +22,7 @@ function createTask(todos, setActive) {
   taskDescription.value = '';
   taskDeadline.value = '';
   taskImportant.checked = false;
-  setActive(false)
-  console.log(taskTitle);
+  setActive(false);
 
   taskId++;
 }
