@@ -15,7 +15,7 @@ function AddTask({ setActive, todos, add }) {
       <label htmlFor="deadline">До сколи нужно выполнить</label>
       <input type="checkbox" name="important" id="important" />
       <label htmlFor="important">Важная задача</label>
-      <button className='modal-create-button' onClick={() => createTask(todos, add)}>создать</button>
+      <button className='modal-create-button' onClick={() => createTask(todos, setActive)}>создать</button>
       <button className='modal-cancel-button' onClick={() => { setActive(false) }}>отмена</button>
     </>
   )

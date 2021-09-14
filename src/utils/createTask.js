@@ -1,22 +1,29 @@
 let taskId = 1;
 
-function createTask(todos, add) {
-  let taskTitle = document.querySelector('.modal-input-title').value;
-  let taskDescription = document.querySelector('.modal-input-description').value;
-  let taskDeadline = document.getElementById('deadline').value;
-  let taskImportant = document.getElementById('important').checked;
+function createTask(todos, setActive) {
+  let taskTitle = document.querySelector('.modal-input-title');
+  let taskDescription = document.querySelector('.modal-input-description');
+  let taskDeadline = document.getElementById('deadline');
+  let taskImportant = document.getElementById('important');
 
   let task = {
     id: taskId,
     completed: false,
-    title: taskTitle,
-    description: taskDescription,
-    dedline: taskDeadline,
-    important: taskImportant,
+    title: taskTitle.value,
+    description: taskDescription.value,
+    dedline: taskDeadline.value,
+    important: taskImportant.checked,
   }
   todos.push(task)
   localStorage.setItem('todos', JSON.stringify(todos));
 
+  //Очистка формы после создания
+  taskTitle.value = '';
+  taskDescription.value = '';
+  taskDeadline.value = '';
+  taskImportant.checked = false;
+  setActive(false)
+  console.log(taskTitle);
 
   taskId++;
 }
