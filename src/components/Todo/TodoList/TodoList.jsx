@@ -10,7 +10,7 @@ function TodoList(props) {
       <ul className='todo-list'>
         {props.todos.map(todo => {
           if (todo.completed === false) {
-            return <TodoItem className="done" todo={todo} key={todo.id} completedChange={props.onToggle} deleteTask={props.deleteTask} />
+            return <TodoItem className="done" todo={todo} key={todo.id} completedChange={props.onToggle} deleteTask={props.deleteTask} setActive={props.setActive} setContent={props.setContent} setTodo={props.setTodo} />
           }
         })}
       </ul>

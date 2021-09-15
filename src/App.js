@@ -3,11 +3,13 @@ import TodoList from "./components/Todo/TodoList/TodoList.jsx";
 import DoneList from "./components/Todo/DoneList/DoneList.jsx";
 import ModalWindow from "./components/Modal/ModalWindow/ModalWindow.jsx";
 import AddTask from "./components/Modal/ModalContent/AddTask/AddTask.jsx";
+import InfoTask from "./components/Modal/ModalContent/infoTask/infoTask.jsx";
 
 function App() {
   const [modalActive, setModalActive] = useState(false);
   const [modalContent, setModalContent] = useState();
   const [todos, setTodos] = useState([]);
+  const [todo, setTodo] = useState()
 
   let todosLS = localStorage.getItem('todos');
   if (todosLS !== null) {
@@ -52,13 +54,17 @@ function App() {
         <h1 className='app-title'>OneDay</h1>
         <button onClick={() => addTask()}>add task</button>
         <div className='lists'>
-          <TodoList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} />
+          <TodoList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} setActive={setModalActive} setContent={setModalContent} setTodo={setTodo} />
           <DoneList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} />
         </div>
       </div>
       <ModalWindow active={modalActive} setActive={setModalActive} >
         {
-          modalContent === 'createTask' ? <AddTask setActive={setModalActive} add={setTodos} todos={todos} /> : null
+          modalContent === 'createTask'
+            ?
+            <AddTask setActive={setModalActive} add={setTodos} todos={todos} />
+            :
+            <InfoTask setActive={setModalActive} todo={todo} />
         }
       </ModalWindow>
     </>
