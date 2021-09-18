@@ -3,12 +3,12 @@ import './AddTask.css';
 import { createTask } from "../../../../utils/createTask";
 import { clearModal } from "../../../../utils/clearModal";
 
-function AddTask({ setActive, todos, add }) {
+function AddTask({ setActive, todos }) {
   return (
     <>
       <div className="modal-header">
         <h2 className="modal-title">Добавить задачу</h2>
-        <button className="modal-close-button" onClick={() => { setActive(false) }}>x</button>
+        <button className="modal-close-button" onClick={() => { clearModal(setActive) }}>x</button>
       </div>
       <input type="text" className='modal-input-title' placeholder='Введите название задачи' />
       <textarea className='modal-input-description' placeholder='Введите описание задачи'></textarea>

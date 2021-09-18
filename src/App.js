@@ -55,7 +55,7 @@ function App() {
         <button onClick={() => addTask()}>add task</button>
         <div className='lists'>
           <TodoList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} setActive={setModalActive} setContent={setModalContent} setTodo={setTodo} />
-          <DoneList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} />
+          <DoneList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} setActive={setModalActive} setContent={setModalContent} setTodo={setTodo} />
         </div>
       </div>
       <ModalWindow active={modalActive} setActive={setModalActive} >
