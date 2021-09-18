@@ -1,7 +1,7 @@
 import React from "react";
 import './infoTask.css';
 
-function InfoTask({ setActive, todo }) {
+function InfoTask({ setActive, todo, modalContent }) {
   return (
     <>
       <div className="modal-header">
@@ -10,11 +10,11 @@ function InfoTask({ setActive, todo }) {
       </div>
       {todo !== undefined ?
         <>
-          <input type="text" className='modal-input-title' placeholder='Введите название задачи' value={todo.title} />
-          <textarea className='modal-input-description' placeholder='Введите описание задачи' value={todo.description}></textarea>
-          <input type="time" name="deadline" id="deadline" min='17:00' max='21:00' value={todo.deadline} />
+          <input type="text" className='modal-input-title' placeholder='Введите название задачи' defaultValue={todo.title} />
+          <textarea className='modal-input-description' placeholder='Введите описание задачи' defaultValue={todo.description}></textarea>
+          <input type="time" name="deadline" id="deadline" min='17:00' max='21:00' defaultValue={todo.deadline} />
           <label htmlFor="deadline">До сколи нужно выполнить</label>
-          <input type="checkbox" name="important" id="important" checked={todo.important} />
+          <input type="checkbox" name="important" id="important" defaultChecked={todo.important} />
           <label htmlFor="important">Важная задача</label>
         </>
         :

@@ -64,7 +64,7 @@ function App() {
             ?
             <AddTask setActive={setModalActive} add={setTodos} todos={todos} />
             :
-            <InfoTask setActive={setModalActive} todo={todo} />
+            <InfoTask setActive={setModalActive} todo={todo} modalContent={modalContent} />
         }
       </ModalWindow>
     </>
