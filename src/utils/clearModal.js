@@ -4,10 +4,15 @@ function clearModal(setActive) {
   let taskDeadline = document.getElementById('deadline');
   let taskImportant = document.getElementById('important');
 
-  taskTitle.value = '';
-  taskDescription.value = '';
-  taskDeadline.value = '';
-  taskImportant.checked = false;
+  if (taskTitle !== null) {
+    taskTitle.value = '';
+  } if (taskDescription !== null) {
+    taskDescription.value = '';
+  } if (taskDeadline !== null) {
+    taskDeadline.value = '';
+  } if (taskImportant !== null) {
+    taskImportant.checked = false;
+  }
 
   setActive(false);
 }
