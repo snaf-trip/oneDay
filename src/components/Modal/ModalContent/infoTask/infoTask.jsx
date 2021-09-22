@@ -1,5 +1,5 @@
 import React from "react";
-import './infoTask.css';
+import './InfoTask.css';
 import { saveEditTask } from "../../../../utils/saveEditTask";
 
 let keyForTitle = 1;

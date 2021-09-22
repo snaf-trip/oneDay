@@ -3,7 +3,10 @@ import TodoList from "./components/Todo/TodoList/TodoList.jsx";
 import DoneList from "./components/Todo/DoneList/DoneList.jsx";
 import ModalWindow from "./components/Modal/ModalWindow/ModalWindow.jsx";
 import AddTask from "./components/Modal/ModalContent/AddTask/AddTask.jsx";
-import InfoTask from "./components/Modal/ModalContent/infoTask/infoTask.jsx";
+import InfoTask from "./components/Modal/ModalContent/infoTask/InfoTask.jsx";
+import DeleteAllTasks from "./components/Modal/ModalContent/deleteAllTasks/DeleteAllTasks.jsx";
+import { deleteAllTasks } from "./utils/deleteAllTasks.js";
+
 
 function App() {
   const [modalActive, setModalActive] = useState(false);
@@ -48,11 +51,17 @@ function App() {
     setModalContent('createTask')
   }
 
+  function delTasks() {
+    setModalActive(true);
+    setModalContent('deleteAllTasks')
+  }
+
   return (
     <>
       <div className='container'>
         <h1 className='app-title'>OneDay</h1>
         <button onClick={() => addTask()}>add task</button>
+        <button onClick={() => delTasks()}>delete all</button>
         <div className='lists'>
           <TodoList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} setActive={setModalActive} setContent={setModalContent} setTodo={setTodo} />
           <DoneList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} setActive={setModalActive} setContent={setModalContent} setTodo={setTodo} />
@@ -64,7 +73,15 @@ function App() {
             ?
             <AddTask setActive={setModalActive} add={setTodos} todos={todos} />
             :
-            <InfoTask setActive={setModalActive} todo={todo} todos={todos} saveTodos={setTodos} modalContent={modalContent} />
+            modalContent === 'openTask'
+              ?
+              <InfoTask setActive={setModalActive} todo={todo} todos={todos} saveTodos={setTodos} modalContent={modalContent} />
+              :
+              modalContent === 'deleteAllTasks'
+                ?
+                <DeleteAllTasks setActive={setModalActive} saveTodos={setTodos} />
+                :
+                null
         }
       </ModalWindow>
     </>
