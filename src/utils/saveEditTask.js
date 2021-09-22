@@ -2,7 +2,7 @@ function saveEditTask(todo, todos, saveTodos) {
   let taskTitle = document.querySelector('.modal-input-title').value;
   let taskDescription = document.querySelector('.modal-input-description').value;
   let taskDeadline = document.getElementById('deadline').value;
-  let taskImportant = document.getElementById('important').value;
+  let taskImportant = document.getElementById('important').checked;
 
   let taskChanged = todos.map(item => {
     if (item === todo) {
