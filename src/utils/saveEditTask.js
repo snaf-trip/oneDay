@@ -1,4 +1,4 @@
-function saveEditTask(todo, todos, saveTodos) {
+function saveEditTask(todo, todos, saveTodos, setActive) {
   let taskTitle = document.querySelector('.modal-input-title').value;
   let taskDescription = document.querySelector('.modal-input-description').value;
   let taskDeadline = document.getElementById('deadline').value;
@@ -17,7 +17,7 @@ function saveEditTask(todo, todos, saveTodos) {
   localStorage.setItem('todos', JSON.stringify(taskChanged));
   saveTodos(taskChanged);
 
-
+  alert('Изменения успешно сохранены');
   console.log(todo);
 };
 
