@@ -59,9 +59,17 @@ function App() {
   return (
     <>
       <div className='container'>
-        <h1 className='app-title'>OneDay</h1>
-        <button onClick={() => addTask()}>add task</button>
-        <button onClick={() => delTasks()}>delete all</button>
+        <div className='header'>
+          <h1 className='app-title'>OneDay</h1>
+          <div className='header-buttons'>
+            <a onClick={() => addTask()} className='header-button header-button--add'>
+            </a>
+            <a onClick={() => delTasks()} className='header-button header-button--del'>
+            </a>
+            <a className='header-button header-button--theme'>
+            </a>
+          </div>
+        </div>
         <div className='lists'>
           <TodoList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} setActive={setModalActive} setContent={setModalContent} setTodo={setTodo} />
           <DoneList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} setActive={setModalActive} setContent={setModalContent} setTodo={setTodo} />
