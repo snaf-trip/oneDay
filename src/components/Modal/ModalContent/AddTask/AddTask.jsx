@@ -12,10 +12,12 @@ function AddTask({ setActive, todos }) {
       </div>
       <input type="text" className='modal-input-title' placeholder='Введите название задачи' />
       <textarea className='modal-input-description' placeholder='Введите описание задачи'></textarea>
-      <input type="time" name="deadline" id="deadline" min='17:00' max='21:00' />
-      <label htmlFor="deadline">До сколи нужно выполнить</label>
-      <input type="checkbox" name="important" id="important" />
-      <label htmlFor="important">Важная задача</label>
+      <div className='deadline-content'>
+        <label htmlFor="deadline" className='deadline-label'>До сколи нужно выполнить</label>
+        <input type="time" name="deadline" id="deadline" className='deadline-input' min='17:00' max='21:00' />
+      </div>
+      <label htmlFor="important" className='important-label'>Важная задача</label>
+      <input type="checkbox" name="important" id="important" className='important-input' />
       <button className='modal-create-button' onClick={() => createTask(todos, setActive)}>создать</button>
       <button className='modal-cancel-button' onClick={() => { clearModal(setActive) }}>отмена</button>
     </>
