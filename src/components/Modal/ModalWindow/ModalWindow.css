@@ -15,9 +15,8 @@
   transform: scale(1);
 }
 
-.modal-content {
-  padding: 20px;
+.modal-content {  
   border-radius: 12px;
-  background-color: white;
-  max-width: 550px;
+  background-color: #FEFDFE;
+  max-width: 800px;
 }

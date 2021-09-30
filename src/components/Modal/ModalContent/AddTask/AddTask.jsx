@@ -8,7 +8,7 @@ function AddTask({ setActive, todos }) {
     <>
       <div className="modal-header">
         <h2 className="modal-title">Добавить задачу</h2>
-        <button className="modal-close-button" onClick={() => { clearModal(setActive) }}>x</button>
+        <a className="modal-close-button" onClick={() => { clearModal(setActive) }}></a>
       </div>
       <input type="text" className='modal-input-title' placeholder='Введите название задачи' />
       <textarea className='modal-input-description' placeholder='Введите описание задачи'></textarea>
