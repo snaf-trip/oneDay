@@ -83,11 +83,41 @@
   margin: 0 17px 0 34px;
 }
 
-.modal-create-button {
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0 26px 0;
   width: 100%;
-  margin: 10px 0;
 }
 
 .modal-cancel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   width: 100%;
+  max-width: 134px;
+  height: 40px;
+  border: 1px solid #ACACAC;
+  color: #ACACAC;
+  border-radius: 4px;
+  font-size: 20px;
+  line-height: 23px;
+  margin-right: 20px;
+}
+
+.modal-create-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 100%;
+  max-width: 134px;
+  height: 40px;
+  background-color: #6473FF;
+  color: #FEFDFE;
+  border-radius: 4px;
+  font-size: 20px;
+  line-height: 23px;
+  margin-right: 34px;
 }
