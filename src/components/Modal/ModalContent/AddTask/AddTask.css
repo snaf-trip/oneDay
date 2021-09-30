@@ -37,7 +37,13 @@
 
 .modal-input-description {
   width: 100%;
-  max-width: 500px;
+  max-width: 732px;
+  height: 129px;
+  margin: 0 0 20px 34px;
+  border: none;
+  background-color: #F2F2F2;
+  padding-left: 9px;
+  border-radius: 4px;
 }
 
 .modal-create-button {
