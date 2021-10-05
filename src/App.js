@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "./components/Header/Header.jsx";
 import TodoList from "./components/Todo/TodoList/TodoList.jsx";
 import DoneList from "./components/Todo/DoneList/DoneList.jsx";
 import ModalWindow from "./components/Modal/ModalWindow/ModalWindow.jsx";
@@ -59,17 +60,7 @@ function App() {
   return (
     <>
       <div className='container'>
-        <div className='header'>
-          <h1 className='app-title'>OneDay</h1>
-          <div className='header-buttons'>
-            <a onClick={() => addTask()} className='header-button header-button--add'>
-            </a>
-            <a onClick={() => delTasks()} className='header-button header-button--del'>
-            </a>
-            <a className='header-button header-button--theme'>
-            </a>
-          </div>
-        </div>
+        <Header addTask={addTask} delTasks={delTasks} />
         <div className='lists'>
           <TodoList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} setActive={setModalActive} setContent={setModalContent} setTodo={setTodo} />
           <DoneList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} setActive={setModalActive} setContent={setModalContent} setTodo={setTodo} />
