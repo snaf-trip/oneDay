@@ -1,13 +1,53 @@
 .todo-item {
   display: flex;
   align-items: center;
-  height: 40px;
-  border: 1px solid #000000;
+  height: 45px;
   margin: 10px 0 10px 0;
-  width: 600px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #FEFDFE;
 }
 
 .done {
   text-decoration: line-through;
   background-color: greenyellow;
+}
+
+.checkbox-input {
+  /* width: 20px;
+  height: 20px; */
+  margin: 0 10px 0 17px;
+  display: flex;
+}
+
+.task-title {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.additional-content {
+  display: flex;
+  margin-right: 20px;
+}
+
+.block-deadline {
+  width: 38px;
+  display: flex;
+  color: #BCBBBC;
+  font-size: 15px;
+  margin-right: 12px;
+  cursor: default;
+}
+
+.block-important {
+  display: flex;
+  margin-right: 12px;
+  width: 21px;
+}
+
+.delete-task-button {
+  display: flex;
+  cursor: pointer;
 }
