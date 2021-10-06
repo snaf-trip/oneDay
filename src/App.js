@@ -4,9 +4,8 @@ import TodoList from "./components/Todo/TodoList/TodoList.jsx";
 import DoneList from "./components/Todo/DoneList/DoneList.jsx";
 import ModalWindow from "./components/Modal/ModalWindow/ModalWindow.jsx";
 import AddTask from "./components/Modal/ModalContent/AddTask/AddTask.jsx";
-import InfoTask from "./components/Modal/ModalContent/infoTask/InfoTask.jsx";
+import InfoTask from "./components/Modal/ModalContent/InfoTask/InfoTask.jsx";
 import DeleteAllTasks from "./components/Modal/ModalContent/deleteAllTasks/DeleteAllTasks.jsx";
-import { deleteAllTasks } from "./utils/deleteAllTasks.js";
 
 
 function App() {
