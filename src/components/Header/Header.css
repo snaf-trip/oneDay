@@ -8,6 +8,10 @@
   margin-top: 60px;
 }
 
+.vers-title {
+  display: flex;
+}
+
 .app-title {
   font-family: Ubuntu;
   font-style: normal;
@@ -15,6 +19,13 @@
   font-size: 72px;
   line-height: 83px;
   margin: 0 0 10px 39px;
+}
+
+.version {
+  font-size: 18px;
+  align-self: end;
+  color: rgba(0, 0, 0, 0.26);
+  cursor: pointer;
 }
 
 .lists {
