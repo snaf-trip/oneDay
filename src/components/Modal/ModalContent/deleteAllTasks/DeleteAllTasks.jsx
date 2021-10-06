@@ -6,11 +6,14 @@ import { deleteAllTasks } from "../../../../utils/deleteAllTasks.js";
 function DeleteAllTasks({ setActive, saveTodos }) {
   return (
     <>
-      <div className="modal-header">
-        <h2 className="modal-title">Очистить всё</h2>
+      <div className="modal-header--delete">
+        <h2 className="modal-title modal-title--delete">Очистить весь список задач</h2>
+        <span className='description-modal--delete'>Вы уверены что хотите очистить все имеющиеся данные?</span>
       </div>
-      <button onClick={() => { setActive(false) }}>Отмена</button>
-      <button onClick={() => { deleteAllTasks(saveTodos, setActive) }}>Удалить</button>
+      <div className='buttons'>
+        <a className='modal-cancel-button' onClick={() => { setActive(false) }}>Отмена</a>
+        <a className='modal-create-button' onClick={() => { deleteAllTasks(saveTodos, setActive) }}>Очистить</a>
+      </div>
     </>
   )
 }
