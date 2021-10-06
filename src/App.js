@@ -74,7 +74,8 @@ function App() {
             :
             modalContent === 'openTask'
               ?
-              <InfoTask setActive={setModalActive} todo={todo} todos={todos} saveTodos={setTodos} modalContent={modalContent} />
+              null
+              // <InfoTask setActive={setModalActive} todo={todo} todos={todos} saveTodos={setTodos} modalContent={modalContent} />
               :
               modalContent === 'deleteAllTasks'
                 ?
