@@ -3,7 +3,7 @@
   align-items: center;
   height: 45px;
   margin: 10px 0 10px 0;
-  width: 100%;
+  width: 98%;
   border-radius: 4px;
   background-color: #FEFDFE;
 }
@@ -15,8 +15,6 @@
 
 .done .task-title {
   text-decoration: line-through;
-  /* text-decoration: transparent; */
-  /* color: #34FF85; */
 }
 
 
@@ -28,6 +26,7 @@
 }
 
 .task-title {
+  max-width: 434px;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;

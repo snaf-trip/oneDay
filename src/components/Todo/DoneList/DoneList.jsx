@@ -4,7 +4,7 @@ import TodoItem from "../TodoItem/TodoItem";
 
 function DoneList(props) {
   return (
-    <div>
+    <div className='done-block'>
       <h3>Done</h3>
       <ul className='done-list'>
         {props.todos.map(todo => {

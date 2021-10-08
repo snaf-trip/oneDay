@@ -5,7 +5,7 @@ import TodoItem from "../TodoItem/TodoItem.jsx";
 
 function TodoList(props) {
   return (
-    <div>
+    <div className='todo-block'>
       <h3>Todo</h3>
       <ul className='todo-list'>
         {props.todos.map(todo => {

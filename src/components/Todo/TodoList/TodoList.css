@@ -1,6 +1,12 @@
+.todo-block {
+  max-width: 600px;
+  width: 100%;
+}
+
 .todo-list {
   list-style: none;
   padding: 0;
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   margin-right: 20px;
 }
