@@ -28,10 +28,6 @@
   cursor: pointer;
 }
 
-.lists {
-  display: flex;
-}
-
 .header-buttons {
   display: flex;
   margin-bottom: 10px;
