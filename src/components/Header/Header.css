@@ -2,7 +2,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  width: 645px;
+  max-width: 645px;
   height: 93px;
   border-bottom: 1px solid #000000;
   margin-top: 60px;
@@ -63,4 +63,27 @@
 
 .header-button--theme:hover {
   background-image: url('../../img/header/changeThemeHover.svg');
+}
+
+@media (max-width: 800px) {
+  .header {
+    height: 100px;
+    border-bottom: 1px solid #000000;
+    margin-top: 10px;
+  }
+
+  .app-title {
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0 0 0px 0px; 
+    
+  }
+
+  /* .header-button {
+    display: block;
+    cursor: pointer;
+    margin-left: 16px;
+    width: 40px;
+    height: 40px;
+  } */
 }
