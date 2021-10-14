@@ -3,7 +3,8 @@
 }
 
 .modal-title--delete {
-margin-right: 210px;
+  width: 95%;
+  margin-right: 210px;
 }
 
 .description-modal--delete {
@@ -12,14 +13,14 @@ margin-right: 210px;
   margin: 15px 0 0 28px
 }
 
-.buttons {
+.buttons--delete {
   display: flex;
   justify-content: flex-end;
   margin: 20px 0 26px 0;
   width: 100%;
 }
 
-.modal-cancel-button {
+.modal-cancel-button--delete {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +36,7 @@ margin-right: 210px;
   margin-right: 20px;
 }
 
-.modal-create-button {
+.modal-create-button--delete {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,4 +50,54 @@ margin-right: 210px;
   font-size: 20px;
   line-height: 23px;
   margin-right: 34px;
+}
+
+@media (max-width: 425px) {
+  .modal-header--delete {
+    display: block;
+  }
+
+  .delete-all--content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50%;
+    /* margin-bottom: auto; */
+  }
+
+  .modal-title--delete {
+    width: 100%;
+    font-size: 20px;
+    margin-right: 210px;
+  }
+
+  .description-modal--delete {
+    display: block;
+    color: rgba(0, 0, 0, 0.26);
+    margin: 10px 10px 0 10px;
+  }
+
+  .buttons--delete {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0 26px 0;
+    width: 100%;
+  }
+
+  .modal-cancel-button--delete {
+    width: 100%;
+    max-width: 104px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 23px;
+    margin-right: 20px;
+  }
+
+  .modal-create-button--delete {
+    width: 100%;
+    max-width: 104px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 23px;
+    margin-right: 34px;
+  }
 }
