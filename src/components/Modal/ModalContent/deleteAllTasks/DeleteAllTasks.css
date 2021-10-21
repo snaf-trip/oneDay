@@ -60,7 +60,7 @@
   .delete-all--content {
     display: flex;
     flex-direction: column;
-    margin-top: 50%;
+    /* margin-top: 50%; */
     /* margin-bottom: auto; */
   }
 
@@ -68,6 +68,7 @@
     width: 100%;
     font-size: 20px;
     margin-right: 210px;
+    margin-top: 20px;
   }
 
   .description-modal--delete {
