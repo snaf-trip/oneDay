@@ -27,7 +27,7 @@ function TodoItem({ todo, completedChange, checked, deleteTask, setActive, setCo
 
         <div className='block-important'>
           {todo.important === true ?
-            <img src={importantIcon} width='21' height='21' />
+            <img src={importantIcon} width='33' height='21' />
             :
             null
           }
