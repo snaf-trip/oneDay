@@ -41,17 +41,18 @@
   display: flex;
   color: #BCBBBC;
   font-size: 15px;
-  margin-right: 12px;
+  /* margin-right: 12px; */
   cursor: default;
 }
 
 .block-important {
   display: flex;
-  margin-right: 12px;
+  /* margin-right: 12px; */
   width: fit-content;
 }
 
 .delete-task-button {
   display: flex;
   cursor: pointer;
+  margin-left: 5px;
 }
