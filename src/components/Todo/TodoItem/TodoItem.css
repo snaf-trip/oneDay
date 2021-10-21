@@ -19,8 +19,6 @@
 
 
 .checkbox-input {
-  /* width: 20px;
-  height: 20px; */
   margin: 0 10px 0 17px;
   display: flex;
 }
@@ -50,7 +48,7 @@
 .block-important {
   display: flex;
   margin-right: 12px;
-  width: 21px;
+  width: fit-content;
 }
 
 .delete-task-button {
