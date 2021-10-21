@@ -74,6 +74,11 @@
   border-radius: 4px;
 }
 
+.important-content {
+  display: flex;
+  align-items: center;
+}
+
 .important-label {
   font-family: Ubuntu;
   font-weight: normal;
@@ -137,7 +142,7 @@
   .modal-title {
     font-size: 26px;
     line-height: 34px;
-    margin: 50px 0 0 10px;
+    margin: 26px 0 0 10px;
   }
   
   .modal-input-title {
@@ -178,12 +183,25 @@
   }
 
   .buttons {
-    display: flex;
-    justify-content: center;
     margin: 40px 0 26px 0;
   }
 
-  .modal-create-button {
-    margin: 0;
+  .modal-cancel-button {
+    width: 100%;
+    max-width: 104px;
+    height: 38px;
+    font-size: 18px;
+    line-height: 23px;
+    margin-right: 20px;
   }
+
+  .modal-create-button {
+    width: 100%;
+    max-width: 104px;
+    height: 38px;
+    font-size: 18px;
+    line-height: 23px;
+    margin-right: 10px;
+  }
+  
 }

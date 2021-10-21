@@ -12,7 +12,7 @@ function DeleteAllTasks({ setActive, saveTodos }) {
       </div>
       <div className='buttons--delete'>
         <a className='modal-cancel-button--delete' onClick={() => { setActive(false) }}>Отмена</a>
-        <a className='modal-create-button--delete' onClick={() => { deleteAllTasks(saveTodos, setActive) }}>Очистить</a>
+        <a className='modal-clear-button--delete' onClick={() => { deleteAllTasks(saveTodos, setActive) }}>Очистить</a>
       </div>
     </div>
   )
