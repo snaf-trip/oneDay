@@ -8,7 +8,6 @@ function AddTask({ setActive, todos }) {
     <>
       <div className="modal-header">
         <h2 className="modal-title">Добавить задачу</h2>
-        <a className="modal-close-button" onClick={() => { clearModal(setActive) }}></a>
       </div>
       <input type="text" className='modal-input-title' placeholder='Введите название задачи' />
       <textarea className='modal-input-description' placeholder='Введите описание задачи'></textarea>
@@ -16,8 +15,10 @@ function AddTask({ setActive, todos }) {
         <label htmlFor="deadline" className='deadline-label'>До сколи нужно выполнить</label>
         <input type="time" name="deadline" id="deadline" className='deadline-input' min='17:00' max='21:00' />
       </div>
-      <label htmlFor="important" className='important-label'>Важная задача</label>
-      <input type="checkbox" name="important" id="important" className='important-input' />
+      <div className="important-content">
+        <label htmlFor="important" className='important-label'>Важная задача</label>
+        <input type="checkbox" name="important" id="important" className='important-input' />
+      </div>
       <div className='buttons'>
         <a className='modal-cancel-button' onClick={() => { clearModal(setActive) }}>отмена</a>
         <a className='modal-create-button' onClick={() => createTask(todos, setActive)}>создать</a>
