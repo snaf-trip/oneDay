@@ -13,8 +13,8 @@ function Header({ addTask, delTasks }) {
         </a>
         <a onClick={() => delTasks()} className='header-button header-button--del'>
         </a>
-        <a className='header-button header-button--theme'>
-        </a>
+        {/* Это кнопа для темной темы!!!!!!
+        <a className='header-button header-button--theme'></a> */}
       </div>
     </div>
   )
