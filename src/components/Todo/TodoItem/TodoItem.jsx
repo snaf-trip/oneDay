@@ -17,23 +17,26 @@ function TodoItem({ todo, completedChange, checked, deleteTask, setActive, setCo
       <input type="checkbox" className='checkbox-input' onChange={() => completedChange(todo.id)} checked={checked} />
       <span className='task-title' onClick={() => { openModalInfoTask(todo.id) }}>{todo.title}</span>
       <div className='additional-content'>
-        <div className='block-deadline'>
-          {todo.deadline !== '' ?
-            todo.deadline
-            :
-            null
-          }
-        </div>
-
         <div className='block-important'>
           {todo.important === true ?
-            <img src={importantIcon} width='33' height='21' />
+            <>
+              <div className='block-deadline'>
+                {todo.deadline !== '' ?
+                  todo.deadline
+                  :
+                  null
+                }
+              </div>
+              <img src={importantIcon} width='33' height='21' />
+              <a className='delete-task-button' onClick={() => deleteTask(todo.id)}><img src={deleteTaskIcon} /></a>
+            </>
             :
-            null
+            <>
+              <div className='block-deadline'>{todo.deadline}</div>
+              <a className='delete-task-button' onClick={() => deleteTask(todo.id)}><img src={deleteTaskIcon} /></a>
+            </>
           }
         </div>
-
-        <a className='delete-task-button' onClick={() => deleteTask(todo.id)}><img src={deleteTaskIcon} /></a>
       </div>
     </li >
   )
