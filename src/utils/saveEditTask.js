@@ -21,7 +21,9 @@ function saveEditTask(todo, todos, saveTodos, setActive) {
     return item
   })
 
-  if (
+  if (todo.title === '') {
+    alert('Вы не ввели название!')
+  } else if (
     todo.title !== initialVersion.title ||
     todo.description !== initialVersion.description ||
     todo.deadline !== initialVersion.deadline ||
@@ -31,8 +33,9 @@ function saveEditTask(todo, todos, saveTodos, setActive) {
     localStorage.setItem('todos', JSON.stringify(taskChanged));
     saveTodos(taskChanged);
     alert('Изменения успешно сохранены!');
+    console.log(todo);
   } else {
-    alert('Вы не внесли никаких изменений.')
+    alert('Вы не внесли никаких изменений!')
   }
 };
 
