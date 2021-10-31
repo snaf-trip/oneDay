@@ -5,12 +5,12 @@
   margin: 10px 0 10px 0;
   width: 98%;
   border-radius: 4px;
-  background-color: #FEFDFE;
+  background-color: var(--todo-background);
 }
 
 .done {
-  border: 2px solid#34FF85;
-  background-color: #FEFDFE;
+  border: 2px solid var(--todo-done-border);
+  background-color: var(--todo-background);
 }
 
 .done .task-title {

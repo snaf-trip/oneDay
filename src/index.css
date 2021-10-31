@@ -1,3 +1,23 @@
+:root {
+  --header-border-bottom: #000000;
+  --header-version-app: rgba(0, 0, 0, 0.26);
+
+  --modal-input-background: #F2F2F2;
+  --modal-labels: rgba(0, 0, 0, 0.26);
+  --modal-cancel-button: #ACACAC;
+  --modal-create-button-bg: #6473FF;
+  --modal-create-button-color: #FEFDFE;
+
+  --modal-delete-title: #000000;
+  --modal-delete-description: rgba(0, 0, 0, 0.26);
+
+  --modal-content-background: #FEFDFE;
+
+  --todo-background: #FEFDFE;
+  --todo-done-border: #34FF85;
+  --todo-deadline-color: #BCBBBC;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

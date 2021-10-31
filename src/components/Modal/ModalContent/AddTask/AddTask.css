@@ -30,7 +30,7 @@
   height: 36px;
   margin: 0 0 25px 34px;
   border: none;
-  background-color: #F2F2F2;
+  background-color: var(--modal-input-background);
   padding-left: 9px;
   border-radius: 4px;
 }
@@ -41,7 +41,7 @@
   height: 129px;
   margin: 0 34px 20px 34px;
   border: none;
-  background-color: #F2F2F2;
+  background-color: var(--modal-input-background);
   padding-left: 9px;
   border-radius: 4px;
 }
@@ -59,7 +59,7 @@
   font-weight: normal;
   font-size: 20px;
   line-height: 23px;
-  color: rgba(0, 0, 0, 0.26);
+  color: var(--modal-labels);
   margin: 0 17px 0 34px;
 }
 
@@ -68,7 +68,7 @@
   max-width: 104px;
   height: 36px;
   border: none;
-  background-color: #F2F2F2;
+  background-color: var(--modal-input-background);
   padding-left: 23px;
   font-size: 16px;
   border-radius: 4px;
@@ -84,7 +84,7 @@
   font-weight: normal;
   font-size: 20px;
   line-height: 23px;
-  color: rgba(0, 0, 0, 0.26);
+  color: var(--modal-labels);
   margin: 0 17px 0 34px;
 }
 
@@ -103,8 +103,8 @@
   width: 100%;
   max-width: 134px;
   height: 40px;
-  border: 1px solid #ACACAC;
-  color: #ACACAC;
+  border: 1px solid var(--modal-cancel-button);
+  color: var(--modal-cancel-button);
   border-radius: 4px;
   font-size: 20px;
   line-height: 23px;
@@ -119,8 +119,8 @@
   width: 100%;
   max-width: 134px;
   height: 40px;
-  background-color: #6473FF;
-  color: #FEFDFE;
+  background-color: var(--modal-create-button-bg);
+  color: var(--modal-create-button-color);
   border-radius: 4px;
   font-size: 20px;
   line-height: 23px;

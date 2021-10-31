@@ -17,7 +17,7 @@
 
 .modal-content {  
   border-radius: 12px;
-  background-color: #FEFDFE;
+  background-color: var(--modal-content-background);
   width: 100%;
   max-width: 800px;
 }
@@ -25,7 +25,6 @@
 @media (max-width: 425px) {
   .modal-content {  
     border-radius: 4px;
-    background-color: #FEFDFE;
     width: 95%;
     height: fit-content;
     max-width: 800px;
