@@ -1,3 +1,5 @@
+import titleValidation from './titleValidation';
+
 let taskId;
 
 if (localStorage.getItem('taskId') === null) {
@@ -12,7 +14,7 @@ function createTask(todos, setActive) {
   let taskDeadline = document.getElementById('deadline');
   let taskImportant = document.getElementById('important');
 
-  if (taskTitle.value !== '') {
+  if (titleValidation(taskTitle.value)) {
     let task = {
       id: taskId,
       completed: false,
@@ -21,7 +23,7 @@ function createTask(todos, setActive) {
       deadline: taskDeadline.value,
       important: taskImportant.checked,
     }
-    todos.push(task)
+    todos.push(task);
     localStorage.setItem('todos', JSON.stringify(todos));
 
     //Очистка модалки после создания задачи
@@ -33,11 +35,12 @@ function createTask(todos, setActive) {
 
     taskId++;
 
-    localStorage.setItem('taskId', taskId)
+    localStorage.setItem('taskId', taskId);
+  } else if (titleValidation(taskTitle.value) === undefined) {
+    alert('Название не может состоять только из пробелов...');
   } else {
-    alert('Ведите название!')
+    alert('Ведите название!');
   }
-
 
 }
 
