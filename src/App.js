@@ -6,6 +6,7 @@ import ModalWindow from "./components/Modal/ModalWindow/ModalWindow.jsx";
 import AddTask from "./components/Modal/ModalContent/AddTask/AddTask.jsx";
 import InfoTask from "./components/Modal/ModalContent/InfoTaskTEST/InfoTask.jsx";
 import DeleteAllTasks from "./components/Modal/ModalContent/deleteAllTasks/DeleteAllTasks.jsx";
+import NoneTasks from "./components/NoneTasks/NoneTasks.jsx";
 
 
 function App() {
@@ -60,10 +61,14 @@ function App() {
     <>
       <div className='container'>
         <Header addTask={addTask} delTasks={delTasks} />
-        <div className='lists'>
-          <TodoList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} setActive={setModalActive} setContent={setModalContent} setTodo={setTodo} />
-          <DoneList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} setActive={setModalActive} setContent={setModalContent} setTodo={setTodo} />
-        </div>
+        {todos.length === 0 ?
+          <NoneTasks />
+          :
+          <div className='lists'>
+            <TodoList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} setActive={setModalActive} setContent={setModalContent} setTodo={setTodo} />
+            <DoneList todos={todos} onToggle={toggleTodo} deleteTask={deleteTask} setActive={setModalActive} setContent={setModalContent} setTodo={setTodo} />
+          </div>
+        }
       </div>
       <ModalWindow active={modalActive} setActive={setModalActive} >
         {
