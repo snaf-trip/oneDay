@@ -4,9 +4,19 @@ import './TodoList.css';
 import TodoItem from "../TodoItem/TodoItem.jsx";
 
 function TodoList(props) {
+  let checkedNotDoneTasks = 0;
   return (
     <div className='todo-block'>
       <h3>Todo</h3>
+      {props.todos.map(todo => {
+        if (todo.completed === false) {
+          checkedNotDoneTasks++;
+        }
+      })}
+      {
+        console.log(checkedNotDoneTasks),
+        checkedNotDoneTasks === 0 ? <span className='completedAllTasks'>Вы выполнили все задачи!</span> : null
+      }
       <ul className='todo-list'>
         {props.todos.map(todo => {
           if (todo.completed === false) {
