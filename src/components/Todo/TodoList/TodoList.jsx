@@ -14,7 +14,6 @@ function TodoList(props) {
         }
       })}
       {
-        console.log(checkedNotDoneTasks),
         checkedNotDoneTasks === 0 ? <span className='completedAllTasks'>Вы выполнили все задачи!</span> : null
       }
       <ul className='todo-list'>
