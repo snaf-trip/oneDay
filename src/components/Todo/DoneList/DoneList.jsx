@@ -3,9 +3,17 @@ import './DoneList.css';
 import TodoItem from "../TodoItem/TodoItem";
 
 function DoneList(props) {
+  let checkedComplitedTasks = 0;
   return (
     <div className='done-block'>
-      <h3>Done</h3>
+      {props.todos.map(todo => {
+        if (todo.completed === true) {
+          checkedComplitedTasks++;
+        }
+      })}
+      {
+        checkedComplitedTasks !== 0 ? <h3>Done</h3> : null
+      }
       <ul className='done-list'>
         {props.todos.map(todo => {
           if (todo.completed === true) {
